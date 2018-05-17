@@ -79,10 +79,15 @@ export default class Day extends React.Component {
       selectsEnd,
       selectingDate,
       startDate,
-      endDate
+      endDate,
+      disabledSelectionHightlight
     } = this.props;
 
-    if (!(selectsStart || selectsEnd) || !selectingDate || this.isDisabled()) {
+    if (
+      !(selectsStart || selectsEnd) ||
+      !selectingDate ||
+      (!disabledSelectionHighlight && this.isDisabled())
+    ) {
       return false;
     }
 

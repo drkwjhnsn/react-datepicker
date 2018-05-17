@@ -94,6 +94,7 @@ export default class Week extends React.Component {
             endDate={this.props.endDate}
             dayClassName={this.props.dayClassName}
             utcOffset={this.props.utcOffset}
+            disabledSelectionHighlight={this.props.disabledSelectionHighlight}
           />
         );
       })
